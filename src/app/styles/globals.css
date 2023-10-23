@@ -1,0 +1,23 @@
+:root {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
