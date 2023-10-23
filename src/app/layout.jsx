@@ -4,6 +4,7 @@ import "../app/styles/tablet_large.css";
 import "../app/styles/tablet_small.css";
 import "../app/styles/mobile.css";
 import Navigation from "./components/navigation";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Tutor App",
@@ -14,8 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navigation/>
+        <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

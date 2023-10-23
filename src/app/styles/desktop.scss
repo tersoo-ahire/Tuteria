@@ -2,7 +2,7 @@
 @import "schema";
 
 main {
-  margin-top: 5em;
+  margin-top: 6em;
 }
 
 nav {
@@ -22,10 +22,6 @@ nav {
   .nav-left {
     display: flex;
     width: 30%;
-
-    img {
-      width: 50%;
-    }
   }
 
   .nav-right {
@@ -43,15 +39,17 @@ nav {
       text-decoration: none;
       transition: 0.2s;
       gap: 0.5em;
+      padding-bottom: 0.4em;
+      border-bottom: 2px solid transparent;
 
       &:hover {
-        color: $purple;
+        color: $blue;
       }
     }
 
     .active {
-      color: $purple;
-      border-bottom: 2px solid $purple;
+      color: $blue;
+      border-bottom: 2px solid $blue;
     }
 
     #account {
@@ -60,8 +58,8 @@ nav {
       justify-content: center;
       color: white;
       font-weight: 600;
-      background-color: $purple;
-      border: 1.25px solid $purple;
+      background-color: $blue;
+      border: 1.25px solid $blue;
       padding: 0.5em 0.85em;
       border-radius: 0.5em;
       transition: all 0.3s;
@@ -74,5 +72,78 @@ nav {
 
   .mobile-nav-toggle {
     display: none;
+  }
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  padding: $desktoppadding;
+
+  .hero-container {
+    display: flex;
+    width: 100%;
+    gap: 2em;
+    margin-top: 3em;
+    margin-bottom: 6em;
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      width: 45%;
+
+      h1 {
+        color: $black;
+        font-size: 3rem;
+        font-weight: 800;
+      }
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      width: 55%;
+    }
+  }
+
+  .subjects-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+
+    h2 {
+      font-size: 1.75rem;
+      color: $black;
+    }
+
+    .subjects-container-sub {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 80%;
+      gap: 2em;
+
+      .subject {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 1em;
+        width: 31%;
+        background-color: $blue;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.5em;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: $lightblue;
+        }
+      }
+    }
   }
 }

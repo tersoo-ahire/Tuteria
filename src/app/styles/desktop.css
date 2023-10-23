@@ -1,5 +1,5 @@
 main {
-  margin-top: 5em;
+  margin-top: 6em;
 }
 
 nav {
@@ -20,9 +20,6 @@ nav .nav-left {
   display: flex;
   width: 30%;
 }
-nav .nav-left img {
-  width: 50%;
-}
 nav .nav-right {
   display: flex;
   width: 70%;
@@ -38,13 +35,15 @@ nav .nav-right a {
   text-decoration: none;
   transition: 0.2s;
   gap: 0.5em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid transparent;
 }
 nav .nav-right a:hover {
-  color: #40196d;
+  color: #002769;
 }
 nav .nav-right .active {
-  color: #40196d;
-  border-bottom: 2px solid #40196d;
+  color: #002769;
+  border-bottom: 2px solid #002769;
 }
 nav .nav-right #account {
   display: flex;
@@ -52,8 +51,8 @@ nav .nav-right #account {
   justify-content: center;
   color: white;
   font-weight: 600;
-  background-color: #40196d;
-  border: 1.25px solid #40196d;
+  background-color: #002769;
+  border: 1.25px solid #002769;
   padding: 0.5em 0.85em;
   border-radius: 0.5em;
   transition: all 0.3s;
@@ -63,4 +62,68 @@ nav .nav-right #account:hover {
 }
 nav .mobile-nav-toggle {
   display: none;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 3em;
+}
+.homepage .hero-container {
+  display: flex;
+  width: 100%;
+  gap: 2em;
+  margin-top: 3em;
+  margin-bottom: 6em;
+}
+.homepage .hero-container .hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 45%;
+}
+.homepage .hero-container .hero-left h1 {
+  color: #1c1b1f;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.homepage .hero-container .hero-right {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+.homepage .subjects-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+.homepage .subjects-container h2 {
+  font-size: 1.75rem;
+  color: #1c1b1f;
+}
+.homepage .subjects-container .subjects-container-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 2em;
+}
+.homepage .subjects-container .subjects-container-sub .subject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 1em;
+  width: 31%;
+  background-color: #002769;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5em;
+  transition: 0.3s;
+}
+.homepage .subjects-container .subjects-container-sub .subject:hover {
+  background-color: #0e46a7;
 }/*# sourceMappingURL=desktop.css.map */
