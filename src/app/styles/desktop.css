@@ -1,1 +1,62 @@
-/*# sourceMappingURL=desktop.css.map */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0em 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.075);
+  z-index: 99;
+}
+nav .nav-left {
+  display: flex;
+  width: 30%;
+}
+nav .nav-left img {
+  width: 50%;
+}
+nav .nav-right {
+  display: flex;
+  width: 70%;
+  justify-content: right;
+  gap: 2em;
+}
+nav .nav-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1b1f;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+  gap: 0.5em;
+}
+nav .nav-right a:hover {
+  color: #40196d;
+}
+nav .nav-right .active {
+  color: #40196d;
+  border-bottom: 2px solid #40196d;
+}
+nav .nav-right #account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  background-color: #40196d;
+  border: 1.25px solid #40196d;
+  padding: 0.5em 0.85em;
+  border-radius: 0.5em;
+  transition: all 0.3s;
+}
+nav .nav-right #account:hover {
+  transform: translateY(-4px);
+}
+nav .mobile-nav-toggle {
+  display: none;
+}/*# sourceMappingURL=desktop.css.map */
