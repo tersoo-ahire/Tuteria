@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import "schema";
 
+main {
+  margin-top: 5em;
+}
+
 nav {
   display: flex;
   align-items: center;
