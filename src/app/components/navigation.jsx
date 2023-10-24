@@ -31,14 +31,11 @@ export default function Navigation() {
         <Link href="/" className={pathname === "/" ? "active" : ""}>
           Home
         </Link>
-        <Link
-          href="/schools"
-          className={pathname === "/schools" ? "active" : ""}
-        >
+        <Link href="#" className={pathname === "/schools" ? "active" : ""}>
           Schools
         </Link>
-        <Link href="#" className={pathname === "/services" ? "active" : ""}>
-          Services
+        <Link href="#" className={pathname === "/my-classes" ? "active" : ""}>
+          My Classes
         </Link>
         <Link href="#" className={pathname === "/contactus" ? "active" : ""}>
           Contact Us
