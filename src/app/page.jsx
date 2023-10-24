@@ -62,7 +62,7 @@ export default function Home() {
             />
             Artificial Intelligence
           </Link>
-          <Link href="/schools/robotics" className="subject">
+          <Link href="#" className="subject">
             <FontAwesomeIcon
               icon={faRobot}
               style={{ color: "#FFC30D" }}
@@ -70,7 +70,7 @@ export default function Home() {
             />
             Robotics
           </Link>
-          <Link href="/schools/uiux-design" className="subject">
+          <Link href="#" className="subject">
             <FontAwesomeIcon
               icon={faFigma}
               style={{ color: "#FFC30D" }}
@@ -78,7 +78,7 @@ export default function Home() {
             />
             UI/UX Design
           </Link>
-          <Link href="/schools/project-management" className="subject">
+          <Link href="#" className="subject">
             <FontAwesomeIcon
               icon={faFlipboard}
               style={{ color: "#FFC30D" }}

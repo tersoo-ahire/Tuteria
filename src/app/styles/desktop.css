@@ -314,7 +314,8 @@ footer .footer-info a:hover {
 .schools-container .create-class form .form-group input, .schools-container .create-class form .form-group select {
   padding: 0.5em 1.5em;
   outline: none;
-  width: 150px;
+  width: -moz-max-content;
+  width: max-content;
 }
 .schools-container .create-class form button {
   width: -moz-max-content;

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import classesData from "../../database/webdevclasses.json";
+import classesData from "../../database/webdev.json";
 
 // Function to convert the date format
 function formatDate(dateStr) {
@@ -33,7 +33,7 @@ export default function WebDevelopment() {
 
     const classList = JSON.stringify(formData);
     try {
-      const response = await fetch("/api/scheduleclass/", {
+      const response = await fetch("/api/web-development/createclass", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

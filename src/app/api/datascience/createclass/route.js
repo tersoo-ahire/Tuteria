@@ -12,7 +12,7 @@ export async function POST(req) {
     // Read the existing data from the JSON file
     const classesFilePath = path.join(
       process.cwd(),
-      "src/app/database/webdevclasses.json"
+      "src/app/database/datascience.json"
     );
 
     // Read the file and parse the JSON data
