@@ -3,6 +3,13 @@
 import React, { useState } from "react";
 import classesData from "../../database/webdevclasses.json";
 
+// Function to convert the date format
+function formatDate(dateStr) {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const date = new Date(dateStr);
+  return date.toLocaleDateString(undefined, options);
+}
+
 export default function WebDevelopment() {
   const [formData, setFormData] = useState({
     subject: "HTML Basics",
@@ -22,16 +29,20 @@ export default function WebDevelopment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    formData.date = formatDate(formData.date);
+
+    const classList = JSON.stringify(formData);
     try {
       const response = await fetch("/api/scheduleclass/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: classList,
       });
 
       if (response.status === 200) {
+        console.log(classList);
         alert("Class scheduled successfully");
         console.log("Class scheduled successfully");
         // Optionally, you can add logic to update the UI with the new class data
@@ -43,6 +54,12 @@ export default function WebDevelopment() {
       alert("Error occurred");
       console.error("An error occurred:", error);
     }
+    setFormData({
+      subject: "HTML Basics",
+      date: "",
+      time: "",
+      location: "Online", // Default to Online, change to "Physical" when selected
+    });
   };
 
   return (
@@ -55,11 +72,7 @@ export default function WebDevelopment() {
             <div className="class" key={index}>
               <span>{classItem.subject}</span>
               <span>{classItem.date}</span>
-              <span>
-                {classItem.location === "Online"
-                  ? "Online Class"
-                  : "Physical Class"}
-              </span>
+              <span>{classItem.location}</span>
               <span>Time: {classItem.time}</span>
               <button>Enroll</button>
             </div>

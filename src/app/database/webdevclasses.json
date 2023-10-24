@@ -22,5 +22,17 @@
     "date": "4th November 2023",
     "location": "Physical",
     "time": "5pm"
+  },
+  {
+    "subject": "Django Basics",
+    "date": "November 4, 2023",
+    "time": "10:13",
+    "location": "Online"
+  },
+  {
+    "subject": "Python Basics",
+    "date": "October 29, 2023",
+    "time": "04:14",
+    "location": "Online"
   }
 ]
