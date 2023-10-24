@@ -70,9 +70,11 @@ export default function WebDevelopment() {
         <div className="classes-sub">
           {classesData.map((classItem, index) => (
             <div className="class" key={index}>
-              <span>{classItem.subject}</span>
+              <span>
+                <b>{classItem.subject}</b>
+              </span>
               <span>{classItem.date}</span>
-              <span>{classItem.location}</span>
+              <span>Location: {classItem.location}</span>
               <span>Time: {classItem.time}</span>
               <button>Enroll</button>
             </div>

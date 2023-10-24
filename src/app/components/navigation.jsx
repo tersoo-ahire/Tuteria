@@ -18,12 +18,14 @@ export default function Navigation() {
   return (
     <nav>
       <div className="nav-left">
-        <Image
-          src="/tutorlogo.svg"
-          alt="Tutor Image"
-          width={125}
-          height={50}
-        />
+        <Link href="/">
+          <Image
+            src="/tutorlogo.svg"
+            alt="Tutor Image"
+            width={125}
+            height={50}
+          />
+        </Link>
       </div>
       <div className={`nav-right ${isMobileNavOpen ? "open" : ""}`}>
         <Link href="/" className={pathname === "/" ? "active" : ""}>
