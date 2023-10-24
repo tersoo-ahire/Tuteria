@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -75,20 +73,19 @@ export default function Footer() {
           </p>
         </div>
         <div className="footer-info">
-          <h3>Personal</h3>
-          <Link href="#">Discover Personal</Link>
-          <Link href="#">Transfer & Spend</Link>
-          <Link href="#">Save</Link>
-          <Link href="#">Investments</Link>
-          <Link href="#">Veegil Card</Link>
+          <h3>Parents</h3>
+          <Link href="#">Home Tutoring</Link>
+          <Link href="#">Homeschooling</Link>
+          <Link href="#">Homework Help</Link>
+          <Link href="#">Common Entrance</Link>
+          <Link href="#">IGCSE Prep</Link>
         </div>
         <div className="footer-info">
-          <h3>Business</h3>
-          <Link href="#">Discover Business</Link>
-          <Link href="#">Business Registration</Link>
-          <Link href="#">SoftPOS</Link>
-          <Link href="#">Invoicing</Link>
-          <Link href="#">Electricity</Link>
+          <h3>Tutor</h3>
+          <Link href="#">Become a Tutor</Link>
+          <Link href="#">Tutoring Jobs</Link>
+          <Link href="#">Tutoring Policies</Link>
+          <Link href="#">Tutor FAQs</Link>
         </div>
         <div className="footer-info">
           <h3>Company</h3>

@@ -73,7 +73,7 @@ footer {
   padding-bottom: 3em;
   gap: 1em;
   margin-top: 6em;
-  background-color: #0e46a7;
+  background-color: #002769;
 }
 footer .footer-info {
   display: flex;
@@ -118,7 +118,7 @@ footer .footer-info a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0e46a7;
+  background-color: #002769;
   padding: 0em 3em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
@@ -221,6 +221,7 @@ footer .footer-info a:hover {
   border-radius: 0.5em;
   box-shadow: 0 4px 13px 2px rgba(0, 0, 0, 0.075);
   transition: 0.3s;
+  text-decoration: none;
 }
 .homepage .subjects-container .subjects-container-sub .subject:hover {
   background-color: #0e46a7;
