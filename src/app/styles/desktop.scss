@@ -258,3 +258,126 @@ footer {
     }
   }
 }
+
+.schools-container {
+  display: flex;
+  flex-direction: column;
+  padding: $desktoppadding;
+  padding-top: 3em;
+  gap: 3em;
+
+  h1 {
+    color: $black;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $black;
+    margin: 0;
+  }
+
+  .classes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 1px solid #dcdcdc7d;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    border-radius: 0.5em;
+
+    .classes-sub {
+      display: flex;
+      flex-direction: column;
+
+      .class {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75em 0.5em;
+        background-color: rgb(227, 227, 227);
+        border-radius: 0.1em;
+        font-weight: 500;
+        gap: 1em;
+
+        span {
+          display: flex;
+          flex-wrap: wrap;
+          width: 20%;
+        }
+
+        button {
+          font-family: inherit;
+          background-color: $lightblue;
+          border: none;
+          outline: none;
+          color: white;
+          padding: 0.75em 1.5em;
+          border-radius: 0.25em;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: $blue;
+            transform: translateY(2.5px);
+          }
+        }
+      }
+
+      .class:nth-child(even) {
+        background-color: rgb(160, 160, 160);
+      }
+    }
+  }
+
+  .create-class {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    h2 {
+      color: $black;
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        label {
+          width: 100px;
+        }
+
+        input,select {
+          padding: 0.5em 1.5em;
+          outline: none;
+          width: 150px;
+        }
+      }
+
+      button {
+        width: max-content;
+        font-family: inherit;
+        font-size: 1rem;
+        background-color: $lightblue;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 0.75em 1.5em;
+        border-radius: 0.25em;
+        transition: 0.3s;
+        margin-top: 2em;
+
+        &:hover {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+}

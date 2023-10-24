@@ -1,0 +1,26 @@
+[
+  {
+    "subject": "HTML Basics",
+    "date": "1st November 2023",
+    "location": "Online",
+    "time": "2pm"
+  },
+  {
+    "subject": "CSS Basics",
+    "date": "2nd November 2023",
+    "location": "Physical",
+    "time": "3pm"
+  },
+  {
+    "subject": "JavaScript Basics",
+    "date": "3rd November 2023",
+    "location": "Online",
+    "time": "4pm"
+  },
+  {
+    "subject": "SCSS Basics",
+    "date": "4th November 2023",
+    "location": "Physical",
+    "time": "5pm"
+  }
+]

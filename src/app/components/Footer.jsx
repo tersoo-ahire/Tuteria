@@ -22,7 +22,7 @@ export default function Footer() {
             width={125}
             height={50}
           />
-          <p>The money app for Africans.</p>
+          <p>The Tutor app for Africans.</p>
           <div className="icon-container">
             <span>
               <FontAwesomeIcon

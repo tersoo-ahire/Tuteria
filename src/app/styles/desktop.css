@@ -225,4 +225,111 @@ footer .footer-info a:hover {
 }
 .homepage .subjects-container .subjects-container-sub .subject:hover {
   background-color: #0e46a7;
+}
+
+.schools-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 3em;
+  padding-top: 3em;
+  gap: 3em;
+}
+.schools-container h1 {
+  color: #1c1b1f;
+  margin: 0;
+}
+.schools-container p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1c1b1f;
+  margin: 0;
+}
+.schools-container .classes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: 1px solid rgba(220, 220, 220, 0.4901960784);
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+.schools-container .classes-container .classes-sub {
+  display: flex;
+  flex-direction: column;
+}
+.schools-container .classes-container .classes-sub .class {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 0.5em;
+  background-color: rgb(227, 227, 227);
+  border-radius: 0.1em;
+  font-weight: 500;
+  gap: 1em;
+}
+.schools-container .classes-container .classes-sub .class span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
+}
+.schools-container .classes-container .classes-sub .class button {
+  font-family: inherit;
+  background-color: #0e46a7;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.75em 1.5em;
+  border-radius: 0.25em;
+  transition: 0.3s;
+}
+.schools-container .classes-container .classes-sub .class button:hover {
+  background-color: #002769;
+  transform: translateY(2.5px);
+}
+.schools-container .classes-container .classes-sub .class:nth-child(even) {
+  background-color: rgb(160, 160, 160);
+}
+.schools-container .create-class {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.schools-container .create-class h2 {
+  color: #1c1b1f;
+  margin: 0;
+}
+.schools-container .create-class form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.schools-container .create-class form .form-group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.schools-container .create-class form .form-group label {
+  width: 100px;
+}
+.schools-container .create-class form .form-group input, .schools-container .create-class form .form-group select {
+  padding: 0.5em 1.5em;
+  outline: none;
+  width: 150px;
+}
+.schools-container .create-class form button {
+  width: -moz-max-content;
+  width: max-content;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #0e46a7;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.75em 1.5em;
+  border-radius: 0.25em;
+  transition: 0.3s;
+  margin-top: 2em;
+}
+.schools-container .create-class form button:hover {
+  background-color: #002769;
 }/*# sourceMappingURL=desktop.css.map */
