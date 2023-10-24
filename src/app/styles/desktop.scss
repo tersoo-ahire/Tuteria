@@ -2,7 +2,8 @@
 @import "schema";
 
 main {
-  margin-top: 6em;
+  margin-top: 5em;
+  margin-bottom: 10em;
 }
 
 nav {
@@ -75,35 +76,142 @@ nav {
   }
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: $desktoppadding;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  gap: 1em;
+  margin-top: 6em;
+  background-color: $lightblue;
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 1em;
+
+    img {
+      width: 80%;
+    }
+
+    p {
+      color: white;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span:hover {
+        cursor: pointer;
+      }
+    }
+
+    h3 {
+      color: $gold;
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        color: $gold;
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+#footer-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $lightblue;
+  padding: $desktoppadding;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+  p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+  }
+}
+
 .homepage {
   display: flex;
   flex-direction: column;
-  padding: $desktoppadding;
 
   .hero-container {
     display: flex;
+    align-items: center;
     width: 100%;
     gap: 2em;
-    margin-top: 3em;
+    background-color: $blue;
     margin-bottom: 6em;
+    padding: $desktoppadding;
+    padding-top: 4em;
+    padding-bottom: 4em;
 
     .hero-left {
       display: flex;
       flex-direction: column;
       gap: 1em;
-      width: 45%;
+      width: 55%;
 
       h1 {
-        color: $black;
+        color: white;
         font-size: 3rem;
         font-weight: 800;
+        margin: 0;
+        width: 90%;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: white;
+      }
+
+      button {
+        background-color: $lightblue;
+        width: max-content;
+        padding: 0.75em 1.5em;
+        color: white;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 0.5em;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: white;
+          color: $blue;
+        }
       }
     }
 
     .hero-right {
       display: flex;
-      flex-direction: column;
-      width: 55%;
+      width: 45%;
+      justify-content: right;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -123,21 +231,23 @@ nav {
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      width: 80%;
+      width: 75%;
       gap: 2em;
 
       .subject {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.5em;
-        padding: 1em;
-        width: 31%;
+        gap: 1em;
+        padding: 2em 0.5em;
+        width: 30%;
         background-color: $blue;
         color: white;
-        font-size: 1rem;
-        font-weight: 500;
+        font-size: 1.4rem;
+        font-weight: 400;
         border-radius: 0.5em;
+        box-shadow: 0 4px 13px 2px rgba(0, 0, 0, 0.075);
         transition: 0.3s;
 
         &:hover {

@@ -19,12 +19,10 @@ export default function Navigation() {
     <nav>
       <div className="nav-left">
         <Image
-          src="/veegil_logo.svg"
+          src="/tutorlogo.svg"
           alt="Tutor Image"
           width={125}
           height={50}
-        sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="image"
         />
       </div>
       <div className={`nav-right ${isMobileNavOpen ? "open" : ""}`}>
@@ -37,16 +35,10 @@ export default function Navigation() {
         >
           Schools
         </Link>
-        <Link
-          href="/services"
-          className={pathname === "/services" ? "active" : ""}
-        >
+        <Link href="#" className={pathname === "/services" ? "active" : ""}>
           Services
         </Link>
-        <Link
-          href="/contactus"
-          className={pathname === "/contactus" ? "active" : ""}
-        >
+        <Link href="#" className={pathname === "/contactus" ? "active" : ""}>
           Contact Us
         </Link>
       </div>
