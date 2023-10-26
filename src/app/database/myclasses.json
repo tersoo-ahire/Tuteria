@@ -6,29 +6,5 @@
     "time": "2:22 AM",
     "location": "Physical",
     "id": 1
-  },
-  {
-    "subject": "JavaScript Basics",
-    "startDate": "October 5 2023",
-    "endDate": "October 10 2023",
-    "location": "Online",
-    "time": "4:00 PM",
-    "id": 2
-  },
-  {
-    "subject": "CSS Basics",
-    "startDate": "October 4 2023",
-    "endDate": "October 9 2023",
-    "location": "Physical",
-    "time": "3:00 PM",
-    "id": 3
-  },
-  {
-    "subject": "CSS Basics",
-    "startDate": "October 4 2023",
-    "endDate": "October 9 2023",
-    "location": "Physical",
-    "time": "3:00 PM",
-    "id": 4
   }
 ]
