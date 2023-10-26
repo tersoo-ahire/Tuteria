@@ -1,3 +1,4 @@
+// pages/api/enroll.js
 import { NextResponse, NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
@@ -6,50 +7,55 @@ export async function POST(req) {
   const request = new NextRequest(req);
 
   if (request.method === "POST") {
-    // Get the form data from the request body
     const formData = JSON.parse(await request.text());
 
-    // Read the existing data from the JSON file
-    const classesFilePath = path.join(
+    const webdevFilePath = path.join(
+      process.cwd(),
+      "src/app/database/webdev.json"
+    );
+    const myclassesFilePath = path.join(
       process.cwd(),
       "src/app/database/myclasses.json"
     );
 
-    // Read the file and parse the JSON data
-    let classesData;
     try {
-      const fileContent = fs.readFileSync(classesFilePath, "utf8");
-      classesData = JSON.parse(fileContent);
-    } catch (error) {
-      return NextResponse.error(new Error("Error reading JSON file"), 500);
-    }
+      const webdevFileContent = fs.readFileSync(webdevFilePath, "utf8");
+      const webdevData = JSON.parse(webdevFileContent);
 
-    // Ensure that classesData is an array before pushing the new data
-    if (!Array.isArray(classesData)) {
-      classesData = [];
-    }
+      // Find the class to enroll in by ID
+      const classToEnroll = webdevData.find(
+        (classItem) => classItem.id === formData.classId
+      );
 
-    console.log("Data before adding:", classesData);
+      if (!classToEnroll) {
+        return NextResponse.error(new Error("Class not found"), 404);
+      }
 
-    // Add the new class to the data
-    classesData.push(formData);
+      const myclassesFileContent = fs.readFileSync(myclassesFilePath, "utf8");
+      let myclassesData = JSON.parse(myclassesFileContent);
 
-    console.log("Data after adding:", classesData);
+      if (!Array.isArray(myclassesData)) {
+        myclassesData = [];
+      }
 
-    // Write the updated data back to the JSON file
-    try {
+      // Add the class to myclasses.json
+      myclassesData.push(classToEnroll);
+
+      // Update myclasses.json
       fs.writeFileSync(
-        classesFilePath,
-        JSON.stringify(classesData, null, 2),
+        myclassesFilePath,
+        JSON.stringify(myclassesData, null, 2),
         "utf8"
       );
-    } catch (error) {
-      return NextResponse.error(new Error("Error writing JSON file"), 500);
-    }
 
-    // Respond with a success message or updated data if needed
-    return NextResponse.json({ message: "Class scheduled successfully" });
+      return NextResponse.json({ message: "Enrolled successfully" });
+    } catch (error) {
+      return NextResponse.error(
+        new Error("Error reading/writing JSON files"),
+        500
+      );
+    }
   } else {
-    return NextResponse.error(new Error("Method Not Allowed"), 405); // Method Not Allowed for non-POST requests
+    return NextResponse.error(new Error("Method Not Allowed"), 405);
   }
 }

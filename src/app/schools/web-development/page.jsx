@@ -78,6 +78,32 @@ export default function WebDevelopment() {
     });
   };
 
+  const handleEnroll = async (classId) => {
+    const enrollmentData = { ...formData, classId }; // Include the class ID in the enrollment data
+
+    try {
+      const response = await fetch("/api/myclasses/enrollclass", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(enrollmentData),
+      });
+
+      if (response.status === 200) {
+        alert("Enrolled successfully");
+        console.log("Enrolled successfully");
+        // Optionally, you can add logic to update the UI with the new class data
+      } else {
+        alert("Enrollment failed");
+        console.error("Enrollment failed");
+      }
+    } catch (error) {
+      alert("Error occurred");
+      console.error("An error occurred:", error);
+    }
+  };
+
   return (
     <main className="schools-container">
       <h1>Web Development Classes</h1>
@@ -101,7 +127,7 @@ export default function WebDevelopment() {
               <span>{classItem.endDate}</span>
               <span>{classItem.location}</span>
               <span>{classItem.time}</span>
-              <button>Enroll</button>
+              <button onClick={() => handleEnroll(classItem.id)}>Enroll</button>
             </div>
           ))}
         </div>
