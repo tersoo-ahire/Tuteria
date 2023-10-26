@@ -64,7 +64,6 @@ export default function MyClasses() {
               <span>{classItem.time}</span>
               <button
                 style={{ backgroundColor: "#7A0000" }}
-                onClick={() => handleDelete(classItem.id)} // Pass the class ID
               >
                 Delete
               </button>

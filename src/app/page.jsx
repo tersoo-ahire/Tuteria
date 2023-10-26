@@ -56,7 +56,7 @@ export default function Home() {
             />
             Web Development
           </Link>
-          <Link href="/schools/datascience" className="subject">
+          <Link href="#" className="subject">
             <FontAwesomeIcon
               icon={faChartGantt}
               style={{ color: "#FFC30D" }}
