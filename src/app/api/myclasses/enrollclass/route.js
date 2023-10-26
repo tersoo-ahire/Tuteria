@@ -1,4 +1,3 @@
-// pages/api/enroll.js
 import { NextResponse, NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
@@ -36,7 +35,12 @@ export async function POST(req) {
         myclassesData = [];
       }
 
-      // Add the class to myclasses.json
+      // Generate a new ID for the enrolled class
+      const lastEnrolledClass = myclassesData[myclassesData.length - 1];
+      const newId = lastEnrolledClass ? lastEnrolledClass.id + 1 : 1;
+
+      // Add the class to myclasses.json with the new ID
+      classToEnroll.id = newId;
       myclassesData.push(classToEnroll);
 
       // Update myclasses.json
