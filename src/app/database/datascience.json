@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "subject": "Intro to Data Science",
     "startDate": "October 3 2023",
     "endDate": "October 8 2023",
@@ -7,6 +8,7 @@
     "location": "Online"
   },
   {
+    "id": 2,
     "subject": "Data Analysis Fundamentals",
     "startDate": "October 4 2023",
     "endDate": "October 9 2023",
@@ -14,6 +16,7 @@
     "location": "Physical"
   },
   {
+    "id": 3,
     "subject": "Machine Learning Basics",
     "startDate": "October 5 2023",
     "endDate": "October 10 2023",
