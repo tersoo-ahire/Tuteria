@@ -34,7 +34,7 @@ export default function Navigation() {
         <Link href="#" className={pathname === "/schools" ? "active" : ""}>
           Schools
         </Link>
-        <Link href="#" className={pathname === "/my-classes" ? "active" : ""}>
+        <Link href="/my-classes" className={pathname === "/my-classes" ? "active" : ""}>
           My Classes
         </Link>
         <Link href="#" className={pathname === "/contactus" ? "active" : ""}>
