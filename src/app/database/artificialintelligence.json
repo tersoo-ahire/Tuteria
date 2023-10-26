@@ -1,26 +1,26 @@
 [
   {
-    "id": 1,
     "subject": "Machine Learning Fundamentals",
     "startDate": "October 3 2023",
     "endDate": "October 8 2023",
     "time": "2:00 PM",
-    "location": "Online"
+    "location": "Online",
+    "id": 1
   },
   {
-    "id": 2,
     "subject": "Natural Language Processing",
     "startDate": "October 4 2023",
     "endDate": "October 9 2023",
     "time": "3:30 PM",
-    "location": "Online"
+    "location": "Online",
+    "id": 2
   },
   {
-    "id": 3,
     "subject": "Computer Vision Techniques",
     "startDate": "October 5 2023",
     "endDate": "October 10 2023",
     "time": "11:00 AM",
-    "location": "Online"
+    "location": "Online",
+    "id": 3
   }
 ]

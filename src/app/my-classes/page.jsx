@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import classesData from "../database/myclasses.json";
 
 // Function to compare class start dates for sorting
@@ -11,6 +13,31 @@ const compareStartDates = (a, b) => {
 export default function MyClasses() {
   // Sort the classesData based on start date
   const sortedClassesData = [...classesData].sort(compareStartDates);
+  const [myClasses, setMyClasses] = useState(sortedClassesData);
+
+  const handleDelete = async (classId) => {
+    try {
+      const response = await fetch("/api/myclasses/unenrollclass", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ classId }),
+      });
+
+      if (response.status === 200) {
+        // Class deleted successfully, update UI
+        const updatedClasses = myClasses.filter(
+          (classItem) => classItem.id !== classId
+        );
+        setMyClasses(updatedClasses);
+      } else {
+        alert("Failed to delete the class");
+      }
+    } catch (error) {
+      alert("An error occurred while deleting the class:", error);
+    }
+  };
 
   return (
     <main className="schools-container">
@@ -26,7 +53,7 @@ export default function MyClasses() {
             <span>Time</span>
             <button>Enroll</button>
           </div>
-          {sortedClassesData.map((classItem, index) => (
+          {myClasses.map((classItem, index) => (
             <div className="class" key={index}>
               <span>
                 <b>{classItem.subject}</b>
@@ -35,7 +62,12 @@ export default function MyClasses() {
               <span>{classItem.endDate}</span>
               <span>{classItem.location}</span>
               <span>{classItem.time}</span>
-              <button style={{ backgroundColor: "#7A0000" }}>Delete</button>
+              <button
+                style={{ backgroundColor: "#7A0000" }}
+                onClick={() => handleDelete(classItem.id)} // Pass the class ID
+              >
+                Delete
+              </button>
             </div>
           ))}
         </div>
