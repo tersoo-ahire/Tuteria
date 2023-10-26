@@ -80,7 +80,7 @@ export default function DataScience() {
 
   return (
     <main className="schools-container">
-      <h1>Web Development Classes</h1>
+      <h1>Artificial Intelligence Classes</h1>
       <div className="classes-container">
         <p>List of Classes Available</p>
         <div className="classes-sub">

@@ -87,8 +87,8 @@
   .homepage .hero-container {
     flex-direction: column-reverse;
     padding: 0em 1em;
-    padding-top: 0em;
-    padding-bottom: 4em;
+    padding-top: 2.5em;
+    padding-bottom: 3em;
     gap: 1em;
   }
   .homepage .hero-container .hero-left {
@@ -153,5 +153,10 @@
   }
   .schools-container .create-class h2 {
     font-size: 1.5rem;
+  }
+  .schools-container .create-class form .form-group input, .schools-container .create-class form .form-group select {
+    padding: 0.5em;
+    outline: none;
+    width: 100%;
   }
 }/*# sourceMappingURL=mobile.css.map */

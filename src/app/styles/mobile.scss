@@ -106,8 +106,8 @@
     .hero-container {
       flex-direction: column-reverse;
       padding: $mobilepadding;
-      padding-top: 0em;
-      padding-bottom: 4em;
+      padding-top: 2.5em;
+      padding-bottom: 3em;
       gap: 1em;
 
       .hero-left {
@@ -190,10 +190,20 @@
         }
       }
     }
-    
+
     .create-class {
       h2 {
         font-size: 1.5rem;
+      }
+
+      form {
+        .form-group {
+          input, select {
+            padding: 0.5em;
+            outline: none;
+            width: 100%;
+          }
+        }
       }
     }
   }
