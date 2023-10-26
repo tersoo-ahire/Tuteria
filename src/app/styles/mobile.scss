@@ -175,6 +175,10 @@
 
     .classes-container {
       .classes-sub {
+        .title {
+          display: none;
+        }
+
         .class {
           align-items: flex-start;
           flex-direction: column;

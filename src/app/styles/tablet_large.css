@@ -133,11 +133,14 @@
   .schools-container p {
     font-size: 1.2rem;
   }
+  .schools-container .classes-container .classes-sub .title span {
+    width: 20%;
+  }
   .schools-container .classes-container .classes-sub .class {
     padding: 1em;
   }
   .schools-container .classes-container .classes-sub .class span {
-    width: 100%;
+    width: 20%;
     font-size: 0.9rem;
   }
   .schools-container .create-class h2 {

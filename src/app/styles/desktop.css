@@ -83,6 +83,7 @@ footer .footer-info {
 }
 footer .footer-info img {
   width: 80%;
+  height: auto;
 }
 footer .footer-info p {
   color: white;
@@ -172,6 +173,7 @@ footer .footer-info a:hover {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
+  outline: none;
   border: none;
   border-radius: 0.5em;
   transition: 0.3s;
@@ -179,6 +181,7 @@ footer .footer-info a:hover {
 .homepage .hero-container .hero-left button:hover {
   background-color: white;
   color: #002769;
+  cursor: pointer;
 }
 .homepage .hero-container .hero-right {
   display: flex;
@@ -187,6 +190,7 @@ footer .footer-info a:hover {
 }
 .homepage .hero-container .hero-right img {
   width: 100%;
+  height: auto;
 }
 .homepage .subjects-container {
   display: flex;
@@ -257,11 +261,42 @@ footer .footer-info a:hover {
   display: flex;
   flex-direction: column;
 }
+.schools-container .classes-container .classes-sub .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em;
+  background-color: #002769;
+  border-radius: 0.1em;
+  font-weight: 500;
+  color: rgb(232, 232, 232);
+  gap: 1em;
+}
+.schools-container .classes-container .classes-sub .title span {
+  display: flex;
+  width: 20%;
+  font-size: 1.1rem;
+}
+.schools-container .classes-container .classes-sub .title button {
+  font-family: inherit;
+  font-weight: 500;
+  background-color: #0e46a7;
+  border: none;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.75em 1.5em;
+  border-radius: 0.25em;
+  transition: 0.3s;
+  display: hidden;
+  opacity: 0;
+}
 .schools-container .classes-container .classes-sub .class {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75em 0.5em;
+  padding: 0.75em;
   background-color: rgb(227, 227, 227);
   border-radius: 0.1em;
   font-weight: 500;
@@ -274,10 +309,13 @@ footer .footer-info a:hover {
 }
 .schools-container .classes-container .classes-sub .class button {
   font-family: inherit;
+  font-weight: 500;
   background-color: #0e46a7;
   border: none;
   outline: none;
   color: white;
+  width: -moz-max-content;
+  width: max-content;
   padding: 0.75em 1.5em;
   border-radius: 0.25em;
   transition: 0.3s;
@@ -311,7 +349,8 @@ footer .footer-info a:hover {
 .schools-container .create-class form .form-group label {
   width: 100px;
 }
-.schools-container .create-class form .form-group input, .schools-container .create-class form .form-group select {
+.schools-container .create-class form .form-group input,
+.schools-container .create-class form .form-group select {
   padding: 0.5em 1.5em;
   outline: none;
   width: -moz-max-content;

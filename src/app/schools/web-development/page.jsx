@@ -13,7 +13,8 @@ function formatDate(dateStr) {
 export default function WebDevelopment() {
   const [formData, setFormData] = useState({
     subject: "HTML Basics",
-    date: "",
+    startDate: "",
+    endDate: "",
     time: "",
     location: "Online", // Default to Online, change to "Physical" when selected
   });
@@ -29,7 +30,8 @@ export default function WebDevelopment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    formData.date = formatDate(formData.date);
+    formData.startDate = formatDate(formData.startDate);
+    formData.endDate = formatDate(formData.endDate);
 
     const classList = JSON.stringify(formData);
     try {
@@ -56,7 +58,8 @@ export default function WebDevelopment() {
     }
     setFormData({
       subject: "HTML Basics",
-      date: "",
+      startDate: "",
+      endDate: "",
       time: "",
       location: "Online", // Default to Online, change to "Physical" when selected
     });
@@ -68,14 +71,23 @@ export default function WebDevelopment() {
       <div className="classes-container">
         <p>List of Classes Available</p>
         <div className="classes-sub">
+          <div className="title">
+            <span>Class</span>
+            <span>Start Date</span>
+            <span>End Date</span>
+            <span>Location</span>
+            <span>Time</span>
+            <button>Enroll</button>
+          </div>
           {classesData.map((classItem, index) => (
             <div className="class" key={index}>
               <span>
                 <b>{classItem.subject}</b>
               </span>
-              <span>{classItem.date}</span>
-              <span>Location: {classItem.location}</span>
-              <span>Time: {classItem.time}</span>
+              <span>{classItem.startDate}</span>
+              <span>{classItem.endDate}</span>
+              <span>{classItem.location}</span>
+              <span>{classItem.time}</span>
               <button>Enroll</button>
             </div>
           ))}
@@ -105,12 +117,23 @@ export default function WebDevelopment() {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="date">Date:</label>
+            <label htmlFor="startDate">Start Date:</label>
             <input
               type="date"
-              id="date"
-              name="date"
-              value={formData.date}
+              id="startDate"
+              name="startDate"
+              value={formData.startDate}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="endDate">End Date:</label>
+            <input
+              type="date"
+              id="endDate"
+              name="endDate"
+              value={formData.endDate}
               onChange={handleInputChange}
               required
             />

@@ -168,11 +168,17 @@
 
     .classes-container {
       .classes-sub {
+        .title {
+          span {
+            width: 20%;
+          }
+        }
+
         .class {
           padding: 1em;
 
           span {
-            width: 100%;
+            width: 20%;
             font-size: 0.9rem;
           }
         }

@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +13,14 @@ import {
 import { faFigma, faFlipboard } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
+  const subjectsContainerRef = useRef(null);
+
+  const scrollToSubjects = () => {
+    if (subjectsContainerRef.current) {
+      subjectsContainerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="homepage">
       <div className="hero-container">
@@ -24,7 +34,7 @@ export default function Home() {
             <span style={{ color: "#FFC30D" }}>personal tutoring</span> partner
             today.
           </p>
-          <button>Join the Training</button>
+          <button onClick={scrollToSubjects}>Join the Training</button>
         </div>
         <div className="hero-right">
           <Image
@@ -37,7 +47,7 @@ export default function Home() {
       </div>
       <div className="subjects-container">
         <h2>What would you like to learn?</h2>
-        <div className="subjects-container-sub">
+        <div className="subjects-container-sub" ref={subjectsContainerRef}>
           <Link href="/schools/web-development" className="subject">
             <FontAwesomeIcon
               icon={faCode}

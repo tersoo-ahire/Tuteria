@@ -1,62 +1,23 @@
 [
   {
     "subject": "Machine Learning Fundamentals",
-    "date": "12th December 2023",
+    "startDate": "12th December 2023",
+    "endDate": "14th December 2023",
     "time": "2:00 PM",
     "location": "Online"
   },
   {
     "subject": "Natural Language Processing",
-    "date": "8th December 2023",
+    "startDate": "8th December 2023",
+    "endDate": "16th December 2023",
     "time": "3:30 PM",
     "location": "Online"
   },
   {
     "subject": "Computer Vision Techniques",
-    "date": "16th December 2023",
+    "startDate": "16th December 2023",
+    "endDate": "24th December 2023",
     "time": "11:00 AM",
-    "location": "Online"
-  },
-  {
-    "subject": "Reinforcement Learning Strategies",
-    "date": "20th December 2023",
-    "time": "4:00 PM",
-    "location": "Online"
-  },
-  {
-    "subject": "Deep Learning Foundations",
-    "date": "24th December 2023",
-    "time": "10:30 AM",
-    "location": "Online"
-  },
-  {
-    "subject": "AI Ethics and Responsible AI",
-    "date": "28th December 2023",
-    "time": "3:00 PM",
-    "location": "Online"
-  },
-  {
-    "subject": "AI in Healthcare",
-    "date": "2nd January 2024",
-    "time": "4:30 PM",
-    "location": "Online"
-  },
-  {
-    "subject": "AI in Finance",
-    "date": "6th January 2024",
-    "time": "2:30 PM",
-    "location": "Online"
-  },
-  {
-    "subject": "HTML Basics",
-    "date": "October 27, 2023",
-    "time": "02:44",
-    "location": "Online"
-  },
-  {
-    "subject": "Statistical Analysis",
-    "date": "October 26, 2023",
-    "time": "04:45",
     "location": "Online"
   }
 ]

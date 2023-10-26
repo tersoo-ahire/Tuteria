@@ -135,6 +135,9 @@
   .schools-container p {
     font-size: 1.2rem;
   }
+  .schools-container .classes-container .classes-sub .title {
+    display: none;
+  }
   .schools-container .classes-container .classes-sub .class {
     align-items: flex-start;
     flex-direction: column;

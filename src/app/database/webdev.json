@@ -1,44 +1,23 @@
 [
   {
     "subject": "HTML Basics",
-    "date": "1st November 2023",
+    "startDate": "1st November 2023",
+    "endDate": "5th November 2023",
     "location": "Online",
     "time": "2pm"
   },
   {
     "subject": "CSS Basics",
-    "date": "2nd November 2023",
+    "startDate": "2nd November 2023",
+    "endDate": "6th November 2023",
     "location": "Physical",
     "time": "3pm"
   },
   {
     "subject": "JavaScript Basics",
-    "date": "3rd November 2023",
+    "startDate": "3rd November 2023",
+    "endDate": "7th November 2023",
     "location": "Online",
     "time": "4pm"
-  },
-  {
-    "subject": "SCSS Basics",
-    "date": "4th November 2023",
-    "location": "Physical",
-    "time": "5pm"
-  },
-  {
-    "subject": "Django Basics",
-    "date": "November 4, 2023",
-    "time": "10:13",
-    "location": "Online"
-  },
-  {
-    "subject": "Python Basics",
-    "date": "October 29, 2023",
-    "time": "04:14",
-    "location": "Online"
-  },
-  {
-    "subject": "HTML Basics",
-    "date": "November 2, 2023",
-    "time": "04:43",
-    "location": "Online"
   }
 ]

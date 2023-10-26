@@ -1,38 +1,23 @@
 [
   {
     "subject": "Intro to Data Science",
-    "date": "December 5, 2023",
+    "startDate": "December 5, 2023",
+    "endDate": "7th December 2023",
     "time": "2pm",
     "location": "Online"
   },
   {
     "subject": "Data Analysis Fundamentals",
-    "date": "December 12, 2023",
+    "startDate": "December 12, 2023",
+    "endDate": "14th December 2023",
     "time": "3pm",
     "location": "Physical"
   },
   {
     "subject": "Machine Learning Basics",
-    "date": "December 19, 2023",
+    "startDate": "December 19, 2023",
+    "endDate": "24th December 2023",
     "time": "4pm",
-    "location": "Online"
-  },
-  {
-    "subject": "Statistical Analysis",
-    "date": "December 26, 2023",
-    "time": "5pm",
-    "location": "Physical"
-  },
-  {
-    "subject": "Data Visualization Techniques",
-    "date": "January 2, 2024",
-    "time": "2pm",
-    "location": "Online"
-  },
-  {
-    "subject": "Machine Learning Basics",
-    "date": "October 27, 2023",
-    "time": "11:48",
     "location": "Online"
   }
 ]
