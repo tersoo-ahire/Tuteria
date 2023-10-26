@@ -9,27 +9,45 @@ export async function POST(req) {
   if (request.method === "POST") {
     const formData = JSON.parse(await request.text());
 
-    const webdevFilePath = path.join(
-      process.cwd(),
-      "src/app/database/webdev.json"
-    );
-    const myclassesFilePath = path.join(
-      process.cwd(),
-      "src/app/database/myclasses.json"
-    );
+    let databaseFilePath;
+
+    // Determine the database file path based on the route
+    if (req.url.includes("/schools/web-development")) {
+      databaseFilePath = path.join(
+        process.cwd(),
+        "src/app/database/webdev.json"
+      );
+    } else if (req.url.includes("/schools/datascience")) {
+      databaseFilePath = path.join(
+        process.cwd(),
+        "src/app/database/artificialintelligence.json"
+      );
+    } else if (req.url.includes("/schools/artificial-intelligence")) {
+      databaseFilePath = path.join(
+        process.cwd(),
+        "src/app/database/datascience.json"
+      );
+    } else {
+      return NextResponse.error(new Error("Invalid route"), 400);
+    }
 
     try {
-      const webdevFileContent = fs.readFileSync(webdevFilePath, "utf8");
-      const webdevData = JSON.parse(webdevFileContent);
+      const databaseFileContent = fs.readFileSync(databaseFilePath, "utf8");
+      const databaseData = JSON.parse(databaseFileContent);
 
       // Find the class to enroll in by ID
-      const classToEnroll = webdevData.find(
+      const classToEnroll = databaseData.find(
         (classItem) => classItem.id === formData.classId
       );
 
       if (!classToEnroll) {
         return NextResponse.error(new Error("Class not found"), 404);
       }
+
+      const myclassesFilePath = path.join(
+        process.cwd(),
+        "src/app/database/myclasses.json"
+      );
 
       const myclassesFileContent = fs.readFileSync(myclassesFilePath, "utf8");
       let myclassesData = JSON.parse(myclassesFileContent);

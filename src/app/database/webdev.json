@@ -22,5 +22,12 @@
     "endDate": "October 10 2023",
     "location": "Online",
     "time": "4 PM"
+  },
+  {
+    "subject": "Django Basics",
+    "startDate": "October 31, 2023",
+    "endDate": "November 3, 2023",
+    "time": "4:25 AM",
+    "location": "Physical"
   }
 ]
