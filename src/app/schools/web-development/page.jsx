@@ -10,6 +10,18 @@ function formatDate(dateStr) {
   return date.toLocaleDateString(undefined, options);
 }
 
+// Add this function for formatting the time
+function formatTime(timeStr) {
+  const options = {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+  // Parse the input time string to a Date object
+  const time = new Date(`1970-01-01T${timeStr}:00`);
+  return time.toLocaleTimeString([], options);
+}
+
 export default function WebDevelopment() {
   const [formData, setFormData] = useState({
     subject: "HTML Basics",
@@ -32,6 +44,7 @@ export default function WebDevelopment() {
 
     formData.startDate = formatDate(formData.startDate);
     formData.endDate = formatDate(formData.endDate);
+    formData.time = formatTime(formData.time);
 
     const classList = JSON.stringify(formData);
     try {

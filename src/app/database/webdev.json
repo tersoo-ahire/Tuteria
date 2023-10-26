@@ -1,23 +1,23 @@
 [
   {
     "subject": "HTML Basics",
-    "startDate": "1st November 2023",
-    "endDate": "5th November 2023",
+    "startDate": "October 3 2023",
+    "endDate": "October 8 2023",
     "location": "Online",
-    "time": "2pm"
+    "time": "2 PM"
   },
   {
     "subject": "CSS Basics",
-    "startDate": "2nd November 2023",
-    "endDate": "6th November 2023",
+    "startDate": "October 4 2023",
+    "endDate": "October 9 2023",
     "location": "Physical",
-    "time": "3pm"
+    "time": "3 PM"
   },
   {
     "subject": "JavaScript Basics",
-    "startDate": "3rd November 2023",
-    "endDate": "7th November 2023",
+    "startDate": "October 5 2023",
+    "endDate": "October 10 2023",
     "location": "Online",
-    "time": "4pm"
+    "time": "4 PM"
   }
 ]
