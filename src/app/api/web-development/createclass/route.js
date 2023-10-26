@@ -31,11 +31,11 @@ export async function POST(req) {
 
     console.log("Data before adding:", classesData);
 
-    // Generate a new ID based on the previous one
-    const lastClass = classesData[classesData.length - 1];
-    const newId = lastClass ? lastClass.id + 1 : 1;
+    // Generate a new ID for enrollment data
+    const lastEnrollment = classesData[classesData.length - 1];
+    const newId = lastEnrollment ? lastEnrollment.id + 1 : 1;
 
-    // Add the new class to the data with the generated ID
+    // Add the new enrollment to the data with the generated ID
     formData.id = newId;
     classesData.push(formData);
 
