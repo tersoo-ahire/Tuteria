@@ -80,7 +80,7 @@ export default function DataScience() {
 
   const handleEnroll = async (classId) => {
     const enrollmentData = { ...formData, classId }; // Include the class ID in the enrollment data
-
+      
     try {
       const response = await fetch("/api/myclasses/enrollaiclass", {
         method: "POST",
@@ -89,7 +89,7 @@ export default function DataScience() {
         },
         body: JSON.stringify(enrollmentData),
       });
-
+  
       if (response.status === 200) {
         alert("Enrolled successfully");
         console.log("Enrolled successfully");

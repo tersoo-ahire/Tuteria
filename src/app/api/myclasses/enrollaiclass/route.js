@@ -10,7 +10,7 @@ export async function POST(req) {
 
     const webdevFilePath = path.join(
       process.cwd(),
-      "src/app/database/artificialinteligence.json"
+      "src/app/database/artificialintelligence.json"
     );
     const myclassesFilePath = path.join(
       process.cwd(),

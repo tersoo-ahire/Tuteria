@@ -6,5 +6,37 @@
     "time": "2:22 AM",
     "location": "Physical",
     "id": 1
+  },
+  {
+    "subject": "JavaScript Basics",
+    "startDate": "October 5 2023",
+    "endDate": "October 10 2023",
+    "location": "Online",
+    "time": "4:00 PM",
+    "id": 2
+  },
+  {
+    "subject": "Machine Learning Fundamentals",
+    "startDate": "October 3 2023",
+    "endDate": "October 8 2023",
+    "time": "2:00 PM",
+    "location": "Online",
+    "id": 3
+  },
+  {
+    "subject": "Computer Vision Techniques",
+    "startDate": "October 5 2023",
+    "endDate": "October 10 2023",
+    "time": "11:00 AM",
+    "location": "Online",
+    "id": 4
+  },
+  {
+    "subject": "Python Basics",
+    "startDate": "October 26, 2023",
+    "endDate": "October 31, 2023",
+    "time": "2:22 AM",
+    "location": "Physical",
+    "id": 5
   }
 ]
