@@ -9,64 +9,41 @@ export async function POST(req) {
   if (request.method === "POST") {
     const formData = JSON.parse(await request.text());
 
-    let databaseFilePath;
-
-    // Determine the database file path based on the route
-    if (req.url.includes("/schools/web-development")) {
-      databaseFilePath = path.join(
-        process.cwd(),
-        "src/app/database/webdev.json"
-      );
-    } else if (req.url.includes("/schools/datascience")) {
-      databaseFilePath = path.join(
-        process.cwd(),
-        "src/app/database/artificialintelligence.json"
-      );
-    } else if (req.url.includes("/schools/artificial-intelligence")) {
-      databaseFilePath = path.join(
-        process.cwd(),
-        "src/app/database/datascience.json"
-      );
-    } else {
-      return NextResponse.error(new Error("Invalid route"), 400);
-    }
+    const webdevFilePath = path.join(
+      process.cwd(),
+      "src/app/database/webdev.json"
+    );
+    const myclassesFilePath = path.join(
+      process.cwd(),
+      "src/app/database/myclasses.json"
+    );
 
     try {
-      const databaseFileContent = fs.readFileSync(databaseFilePath, "utf8");
-      const databaseData = JSON.parse(databaseFileContent);
+      const webdevFileContent = fs.readFileSync(webdevFilePath, "utf8");
+      const webdevData = JSON.parse(webdevFileContent);
 
-      // Find the class to enroll in by ID
-      const classToEnroll = databaseData.find(
-        (classItem) => classItem.id === formData.classId
-      );
+      // Generate a unique ID for the new class
+      const newClassId =
+        webdevData.reduce(
+          (maxId, classItem) => Math.max(maxId, classItem.id || 0),
+          0
+        ) + 1;
 
-      if (!classToEnroll) {
-        return NextResponse.error(new Error("Class not found"), 404);
-      }
+      // Create the new class object with the generated ID
+      const newClass = { ...formData, id: newClassId };
 
-      const myclassesFilePath = path.join(
-        process.cwd(),
-        "src/app/database/myclasses.json"
-      );
+      // Add the new class to the webdev.json file
+      webdevData.push(newClass);
 
-      const myclassesFileContent = fs.readFileSync(myclassesFilePath, "utf8");
-      let myclassesData = JSON.parse(myclassesFileContent);
-
-      if (!Array.isArray(myclassesData)) {
-        myclassesData = [];
-      }
-
-      // Add the class to myclasses.json
-      myclassesData.push(classToEnroll);
-
-      // Update myclasses.json
+      // Update webdev.json
       fs.writeFileSync(
-        myclassesFilePath,
-        JSON.stringify(myclassesData, null, 2),
+        webdevFilePath,
+        JSON.stringify(webdevData, null, 2),
         "utf8"
       );
 
-      return NextResponse.json({ message: "Enrolled successfully" });
+      // The rest of your code for enrolling the class remains the same
+      // ...
     } catch (error) {
       return NextResponse.error(
         new Error("Error reading/writing JSON files"),

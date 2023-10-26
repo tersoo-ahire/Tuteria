@@ -80,7 +80,7 @@ export default function WebDevelopment() {
 
   const handleEnroll = async (classId) => {
     const enrollmentData = { ...formData, classId }; // Include the class ID in the enrollment data
-
+      
     try {
       const response = await fetch("/api/myclasses/enrollclass", {
         method: "POST",
@@ -89,7 +89,7 @@ export default function WebDevelopment() {
         },
         body: JSON.stringify(enrollmentData),
       });
-
+  
       if (response.status === 200) {
         alert("Enrolled successfully");
         console.log("Enrolled successfully");
@@ -102,7 +102,7 @@ export default function WebDevelopment() {
       alert("Error occurred");
       console.error("An error occurred:", error);
     }
-  };
+  };  
 
   return (
     <main className="schools-container">
