@@ -22,33 +22,33 @@ export async function POST(req) {
       const webdevFileContent = fs.readFileSync(webdevFilePath, "utf8");
       const webdevData = JSON.parse(webdevFileContent);
 
-      // Generate a unique ID for the new class
-      const newClassId =
-        webdevData.reduce(
-          (maxId, classItem) => Math.max(maxId, classItem.id || 0),
-          0
-        ) + 1;
+      // Find the class to enroll in by ID
+      const classToEnroll = webdevData.find((classItem) => classItem.id === formData.classId);
 
-      // Create the new class object with the generated ID
-      const newClass = { ...formData, id: newClassId };
+      if (!classToEnroll) {
+        return NextResponse.error(new Error("Class not found"), 404);
+      }
 
-      // Add the new class to the webdev.json file
-      webdevData.push(newClass);
+      const myclassesFileContent = fs.readFileSync(myclassesFilePath, "utf8");
+      let myclassesData = JSON.parse(myclassesFileContent);
 
-      // Update webdev.json
+      if (!Array.isArray(myclassesData)) {
+        myclassesData = [];
+      }
+
+      // Add the class to myclasses.json
+      myclassesData.push(classToEnroll);
+
+      // Update myclasses.json
       fs.writeFileSync(
-        webdevFilePath,
-        JSON.stringify(webdevData, null, 2),
+        myclassesFilePath,
+        JSON.stringify(myclassesData, null, 2),
         "utf8"
       );
 
-      // The rest of your code for enrolling the class remains the same
-      // ...
+      return NextResponse.json({ message: "Enrolled successfully" });
     } catch (error) {
-      return NextResponse.error(
-        new Error("Error reading/writing JSON files"),
-        500
-      );
+      return NextResponse.error(new Error("Error reading/writing JSON files"), 500);
     }
   } else {
     return NextResponse.error(new Error("Method Not Allowed"), 405);

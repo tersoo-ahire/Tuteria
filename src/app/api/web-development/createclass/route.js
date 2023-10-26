@@ -31,7 +31,12 @@ export async function POST(req) {
 
     console.log("Data before adding:", classesData);
 
-    // Add the new class to the data
+    // Generate a new ID based on the previous one
+    const lastClass = classesData[classesData.length - 1];
+    const newId = lastClass ? lastClass.id + 1 : 1;
+
+    // Add the new class to the data with the generated ID
+    formData.id = newId;
     classesData.push(formData);
 
     console.log("Data after adding:", classesData);
