@@ -82,7 +82,7 @@ export default function WebDevelopment() {
     const enrollmentData = { ...formData, classId }; // Include the class ID in the enrollment data
       
     try {
-      const response = await fetch("/api/myclasses/enrollclass", {
+      const response = await fetch("/api/myclasses/enrollwebclass", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

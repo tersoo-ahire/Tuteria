@@ -82,7 +82,7 @@ export default function DataScience() {
     const enrollmentData = { ...formData, classId }; // Include the class ID in the enrollment data
 
     try {
-      const response = await fetch("/api/myclasses/enrollclass", {
+      const response = await fetch("/api/myclasses/enrolldataclass", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -8,52 +8,26 @@ export async function POST(req) {
   if (request.method === "POST") {
     const formData = JSON.parse(await request.text());
 
-    let databaseFilePath;
-
-    // Get the current route from the request URL
-    const route = request.url.pathname;
-
-    // Determine the database file path based on the route
-    switch (route) {
-      case "/schools/web-development":
-        databaseFilePath = path.join(
-          process.cwd(),
-          "src/app/database/webdev.json"
-        );
-        break;
-      case "/schools/data-science":
-        databaseFilePath = path.join(
-          process.cwd(),
-          "src/app/database/datascience.json"
-        );
-        break;
-      case "/schools/artificial-intelligence":
-        databaseFilePath = path.join(
-          process.cwd(),
-          "src/app/database/artificialintelligence.json"
-        );
-        break;
-      default:
-        return NextResponse.error(new Error("Invalid route"), 404);
-    }
+    const webdevFilePath = path.join(
+      process.cwd(),
+      "src/app/database/artificialinteligence.json"
+    );
+    const myclassesFilePath = path.join(
+      process.cwd(),
+      "src/app/database/myclasses.json"
+    );
 
     try {
-      const databaseFileContent = fs.readFileSync(databaseFilePath, "utf8");
-      const databaseData = JSON.parse(databaseFileContent);
+      const webdevFileContent = fs.readFileSync(webdevFilePath, "utf8");
+      const webdevData = JSON.parse(webdevFileContent);
 
       // Find the class to enroll in by ID
-      const classToEnroll = databaseData.find(
-        (classItem) => classItem.id === formData.classId
-      );
+      const classToEnroll = webdevData.find((classItem) => classItem.id === formData.classId);
 
       if (!classToEnroll) {
         return NextResponse.error(new Error("Class not found"), 404);
       }
 
-      const myclassesFilePath = path.join(
-        process.cwd(),
-        "src/app/database/myclasses.json"
-      );
       const myclassesFileContent = fs.readFileSync(myclassesFilePath, "utf8");
       let myclassesData = JSON.parse(myclassesFileContent);
 
@@ -78,10 +52,7 @@ export async function POST(req) {
 
       return NextResponse.json({ message: "Enrolled successfully" });
     } catch (error) {
-      return NextResponse.error(
-        new Error("Error reading/writing JSON files"),
-        500
-      );
+      return NextResponse.error(new Error("Error reading/writing JSON files"), 500);
     }
   } else {
     return NextResponse.error(new Error("Method Not Allowed"), 405);
